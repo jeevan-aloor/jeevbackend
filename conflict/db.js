@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-require('dotenv').config()
+
 
 const connection = mongoose.connect(
- process.env.mongourl
+ "mongodb+srv://jeevan:jeevu@cluster0.rvinojj.mongodb.net/flybuy?retryWrites=true&w=majority"
 );
 
 module.exports={

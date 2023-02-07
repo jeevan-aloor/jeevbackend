@@ -3,7 +3,7 @@ const {connection} =require("./conflict/db")
 const {productRouter} =require("./router/productrouter")
 const {allproductRouter} =require("./router/allproduct")
 const {cartproductrouter}=require("./router/cartproduct")
-require('dotenv').config()
+
 const cors=require("cors")
 const stripe = require('stripe')("sk_test_51MXJMUSDTMqP1T3rxJg5nq1O4zNqaZWg5pMM9p9GRyUgDkCd2hYdZlX0vagbHjYJFDK4mEY3s6eJml3Crbju3hsu00rgzRJ4Vh");
 
@@ -45,7 +45,7 @@ app.post('/api/payments', async (req, res) => {
 
 
 
-app.listen(process.env.port,async()=>{
+app.listen(8000,async()=>{
     try {
         await connection
         console.log("connected to db")
